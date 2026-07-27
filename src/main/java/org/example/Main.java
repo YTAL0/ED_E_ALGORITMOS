@@ -9,8 +9,12 @@ public class Main {
         List.addValue("Babalu");
         List.addValue("Baba");
         List.addValue("Balu");
-        IO.println(List.getLenght());
-        IO.println(List.getFirst().getValue());
-        IO.println(List.getLast().getValue());
+        List.addValue("Baaaau");
+
+        List.Remove("baba");
+        for(int  i = 0; i < List.getLenght(); i++){
+            System.out.println(List.get(i).getValue());
+        }
+       IO.println(List.getLenght());
     }
 }

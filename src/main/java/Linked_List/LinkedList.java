@@ -41,4 +41,38 @@ public class LinkedList {
         return current;
     }
 
+    public void setFirst(Node first) {
+        this.first = first;
+    }
+
+    public void setLast(Node last) {
+        this.last = last;
+    }
+
+    public  void Remove(String content){
+        Node current = this.first;
+        Node previus = null;
+        for(int i = 0; i < this.lenght; i++){
+            if(current.getValue().equalsIgnoreCase(content)){
+                if(this.lenght == 1){
+                    this.first = null;
+                    this.last = null;
+                }else if(current == this.first){
+                    setFirst(current.getNext());
+                    current.setNext(null);
+                }else if(current == this.last){
+                    setLast(previus);
+                    current.setNext(null);
+                }else{
+                    previus.setNext(current.getNext());
+                    current = null;
+                }
+                this.lenght--;
+                break;
+            }
+            previus = current;
+            current = current.getNext();
+        }
+    }
+
 }
