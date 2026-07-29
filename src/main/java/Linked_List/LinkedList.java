@@ -1,15 +1,15 @@
 package Linked_List;
 
-public class LinkedList {
-    private Node first;
-    private Node last;
+public class LinkedList <T> {
+    private Node <T> first;
+    private Node <T> last;
     private int lenght;
 
     public  LinkedList(){
         this.lenght = 0;
     }
-    public void addValue(String value){
-        Node node = new Node(value);
+    public void addValue(T value){
+        Node<T> node = new Node<T>(value);
         if(this.first == null && this.last == null){
             this.first = node;
             this.last = node;
@@ -20,11 +20,11 @@ public class LinkedList {
         lenght++;
     }
 
-    public Node getFirst() {
+    public Node<T> getFirst() {
         return first;
     }
 
-    public Node getLast() {
+    public Node<T> getLast() {
         return last;
     }
 
@@ -41,19 +41,19 @@ public class LinkedList {
         return current;
     }
 
-    public void setFirst(Node first) {
+    public void setFirst(Node<T> first) {
         this.first = first;
     }
 
-    public void setLast(Node last) {
+    public void setLast(Node<T> last) {
         this.last = last;
     }
 
-    public  void Remove(String content){
-        Node current = this.first;
-        Node previus = null;
+    public  void Remove(T content){
+        Node<T> current = this.first;
+        Node<T> previus = null;
         for(int i = 0; i < this.lenght; i++){
-            if(current.getValue().equalsIgnoreCase(content)){
+            if(current.getValue().equals(content)){
                 if(this.lenght == 1){
                     this.first = null;
                     this.last = null;
