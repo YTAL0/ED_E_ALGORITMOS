@@ -6,7 +6,7 @@ public class Main {
     static void main() {
         LinkedList List = new LinkedList();
 
-        List.addValue("Babalu");
+        List.addValue("Baaaaaa");
         List.addValue("Baba");
         List.addValue("Balu");
         List.addValue("Baaaau");
