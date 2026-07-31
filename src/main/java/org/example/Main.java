@@ -8,10 +8,7 @@ public class Main {
 
         List.addValue("Baaaaaa");
         List.addValue("Baba");
-        List.addValue("Balu");
-        List.addValue("Baaaau");
-
-        List.Remove("baba");
+        List.Remove("Baba");
         for(int  i = 0; i < List.getLenght(); i++){
             System.out.println(List.get(i).getValue());
         }
