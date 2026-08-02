@@ -3,7 +3,6 @@ package Linked_List;
 public class Node <T> {
     private T value;
     private Node <T> next;
-
     public Node(T value){
         this.value = value;
     }
